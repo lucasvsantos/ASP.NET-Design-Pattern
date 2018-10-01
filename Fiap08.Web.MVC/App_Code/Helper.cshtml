@@ -1,0 +1,14 @@
+﻿@helper Botao(string name)
+{
+    <input type="submit" name="@name" value="@name" class="btn btn-success" />
+}
+
+@helper Mensagem(object msg)
+{
+    if (msg != null)
+    {
+        <div class="alert alert-success">
+            @msg
+        </div>
+    }
+}

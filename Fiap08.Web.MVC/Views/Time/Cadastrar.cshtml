@@ -1,0 +1,24 @@
+﻿@model Fiap08.Web.MVC.Models.Time
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<div>
+    @TempData["msg"]
+</div>
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(t => t.Nome)
+        @Html.TextBoxFor(t => t.Nome)
+    </div>
+    <div>
+        @Html.LabelFor(t => t.Estadio)
+        @Html.CheckBoxFor(t => t.Estadio)
+    </div>
+    <input type="submit" name="cadastrar" value="Cadastrar" />
+}
